@@ -24,7 +24,7 @@ class Ui(QMainWindow):
   super(self.__class__, self).__init__() # Call the inherited classes __init__ method
   uic.loadUi('brewie.ui', self) # Load the .ui file
   
-  self.btn1.clicked.connect(lambda: self.PressedBtn)
+  self.btn1.clicked.connect(lambda: self.PressedBtn())
   
   
   #self.show() # Show the GUI
