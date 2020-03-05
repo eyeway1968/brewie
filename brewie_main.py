@@ -21,7 +21,7 @@ class Ui(QMainWindow):
 
 
  def __init__(self):
-  super(self.__class__, self).__init__() # Call the inherited classes __init__ method
+  super(Ui, self).__init__() # Call the inherited classes __init__ method
   uic.loadUi('brewie.ui', self) # Load the .ui file
   
   self.btn1.clicked.connect(lambda: self.PressedBtn())
@@ -31,13 +31,14 @@ class Ui(QMainWindow):
 
 
  
-
-app = QApplication(sys.argv) # Create an instance of QtWidgets.QApplication
-window = Ui() # Create an instance of our class
-window.show()
-app.exec_() # Start the application 
+def main():
+ app = QApplication(sys.argv) # Create an instance of QtWidgets.QApplication
+ window = Ui() # Create an instance of our class
+ window.show()
+ sys.exit(app.exec_()) # Start the application 
  ### Hooks to for buttons
 
 
-
+if __name__ == '__main__':         
+    main()
  
